@@ -1,0 +1,117 @@
+// Body
+ //custom variables 
+$primary: #2c3ad7;
+$secondary: #36475e;
+$nav-bg: #efede6;
+$danger: #f54611;
+$info : #ff0059;
+$gray : #84888a;
+$orange : #FF4500;
+$yellow : #fcba03;;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+// navigation bar
+.navbar-brand {
+  background-image: url(../image/foodfusion.png);
+  width: 170px;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: center center;
+  display: block; 
+}
+
+nav {
+  position: fixed;
+  top: 0;
+}
+
+.navbar{
+  top: 0;
+  background-color: $nav-bg;
+  height: 80px;
+  margin: 20px;
+  position: fixed;
+  z-index: 1000;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+
+.navbar-toggler {
+  border: none;
+  z-index: 1000;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+body{
+  padding-top: 80px;
+}
+
+.nav-link {
+  color: $gray;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: $secondary;
+}
+
+ // about us page
+ .about-us-head {
+  background-image: url(../image/aboutus-bg.png);
+  min-height: 380px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center ;
+}
+  @media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar .nav-text {
+        display: none;
+    }
+    .admin-content{
+      margin-left: 20px;
+      padding: 0;
+    }
+  }
+
+@media (min-width: 950px){
+  .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: $secondary;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+  }
+
+
+  .search-container{
+    max-width: 200px;
+  }
+ 
+
+ 
+
+}
